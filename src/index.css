@@ -1,0 +1,66 @@
+:root {
+  --rose: #e91e63;
+  --dark: #444;
+  --white: #fff;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--white);
+}
+.app {
+  width: 90%;
+  height: 500px;
+  background-color: var(--white);
+  margin: 50px auto;
+  border-radius: 12px;
+  padding: 15px;
+  border: 1px solid #eee;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+.header h1 {
+  width: fit-content;
+}
+.header .controls {
+  flex: 1;
+  text-align: right;
+}
+.header .controls button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.header .controls .add-new {
+  margin-right: 10px;
+  border: 1px solid var(--dark);
+  background-color: transparent;
+  color: var(--dark);
+}
+.header .controls .add-new:hover {
+  background-color: var(--dark);
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+.header .controls .sign-in {
+  background-color: var(--rose);
+  color: var(--white);
+  border: 1px solid var(--rose);
+}
+.header .controls .sign-in:hover {
+  background-color: var(--white);
+  color: var(--rose);
+  border-color: var(--rose);
+}
