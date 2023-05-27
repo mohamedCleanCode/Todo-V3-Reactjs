@@ -1,11 +1,11 @@
-import Header from "./components/Header/Header";
-import Todos from "./components/Todos/Todos";
+import EditTask from "./components/EditTask/EditTask";
 
 function App() {
   return (
     <div className="app">
-      <Header />
-      <Todos />
+      {/* <Header />
+      <Todos /> */}
+      <EditTask />
     </div>
   );
 }

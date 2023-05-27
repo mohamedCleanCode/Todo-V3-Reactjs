@@ -138,3 +138,63 @@ body {
   background-color: var(--rose);
   color: var(--white);
 }
+.edit-task {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+.edit-task .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #00000054;
+}
+.edit-task-container {
+  position: absolute;
+  background-color: var(--white);
+  width: 50%;
+  height: 60%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.edit-task-container .heade {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 22px;
+}
+.edit-task-container .heade .close-button {
+  cursor: pointer;
+}
+.edit-task-container .task-input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+}
+.edit-task-container .task-range label {
+  font-weight: bold;
+}
+.edit-task-container .task-range input {
+  width: 100%;
+  margin-top: 10px;
+}
+.edit-task-container button {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+.edit-task-container button.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
