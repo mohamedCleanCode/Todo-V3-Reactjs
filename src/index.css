@@ -64,3 +64,77 @@ body {
   color: var(--rose);
   border-color: var(--rose);
 }
+.todos {
+  margin-top: 15px;
+}
+.todos .message {
+  text-align: right;
+  color: var(--dark);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.todos .todos-list {
+  display: flex;
+  flex-direction: column;
+}
+.todos-list .todo-item {
+  width: 100%;
+  border: 1px solid #eee;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo-item .title {
+  font-size: 22px;
+  font-weight: bold;
+  width: 25%;
+}
+.todo-item .progress {
+  background-color: #eee;
+  width: 40%;
+  height: 15px;
+  border-radius: 12px;
+  position: relative;
+}
+.progress .inside-progress {
+  position: absolute;
+  width: 89%;
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: inherit;
+  transition: 0.5s;
+}
+.todo-item-controls {
+  width: 25%;
+  text-align: right;
+}
+.todo-item-controls button {
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.todo-item-controls .edit {
+  background-color: transparent;
+  color: #4caf50;
+  border: 1px solid #4caf50;
+  margin-right: 10px;
+}
+.todo-item-controls .edit:hover {
+  background-color: #4caf50;
+  color: var(--white);
+}
+.todo-item-controls .delete {
+  background-color: transparent;
+  color: var(--rose);
+  border: 1px solid var(--rose);
+}
+.todo-item-controls .delete:hover {
+  background-color: var(--rose);
+  color: var(--white);
+}
