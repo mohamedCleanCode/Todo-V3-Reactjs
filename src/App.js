@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import EditTask from "./components/EditTask/EditTask";
 import Header from "./components/Header/Header";
 import Login from "./components/Login/Login";
 import ResetPassword from "./components/ResetPassword/ResetPassword";
@@ -16,7 +15,6 @@ function App() {
             <>
               <Header />
               <Todos />
-              <EditTask />
             </>
           }
         />

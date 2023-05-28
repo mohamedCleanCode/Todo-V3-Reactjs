@@ -1,13 +1,15 @@
 import React from "react";
 
-const EditTask = () => {
+const EditTask = ({ active, onClickCloseButton }) => {
   return (
-    <div className="edit-task">
+    <div className={`edit-task ${active ? "active" : ""}`}>
       <div className="overlay"></div>
       <div className="edit-task-container">
         <div className="heade">
           <p>Let's edit your task</p>
-          <div className="close-button">X</div>
+          <div className="close-button" onClick={onClickCloseButton}>
+            X
+          </div>
         </div>
         <div>
           <input className="task-input" type="text" />

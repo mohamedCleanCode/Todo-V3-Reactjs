@@ -12,6 +12,9 @@
   border: none;
   outline: none;
 }
+a {
+  text-decoration: none;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--white);
@@ -62,6 +65,9 @@ body {
   background-color: var(--rose);
   color: var(--white);
   border: 1px solid var(--rose);
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-transform: uppercase;
 }
 .header .controls .sign-in:hover {
   background-color: var(--white);
@@ -149,6 +155,10 @@ body {
   left: 0;
   top: 0;
   display: none;
+}
+.edit-task.active {
+  display: block;
+  z-index: 1000;
 }
 .edit-task .overlay {
   position: absolute;
