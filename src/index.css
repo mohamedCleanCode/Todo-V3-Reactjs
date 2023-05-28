@@ -8,6 +8,10 @@
   margin: 0;
   padding: 0;
 }
+:focus {
+  border: none;
+  outline: none;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--white);
@@ -144,6 +148,7 @@ body {
   height: 100vh;
   left: 0;
   top: 0;
+  display: none;
 }
 .edit-task .overlay {
   position: absolute;
@@ -181,6 +186,7 @@ body {
   padding: 15px;
   border: 1px solid #eee;
   border-radius: 12px;
+  font-size: 22px;
 }
 .edit-task-container .task-range label {
   font-weight: bold;
@@ -197,4 +203,31 @@ body {
 .edit-task-container button.disabled {
   opacity: 0.4;
   pointer-events: none;
+}
+.signup {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.signup input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid var(--rose);
+  border-radius: 12px;
+  font-size: 22px;
+}
+.signup input[type="submit"] {
+  background-color: transparent;
+  color: var(--rose);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.signup input[type="submit"]:hover {
+  background-color: var(--rose);
+  color: var(--white);
+}
+.signup div:last-child {
+  text-align: center;
 }
