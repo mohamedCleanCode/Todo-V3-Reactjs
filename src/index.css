@@ -228,6 +228,10 @@ body {
   background-color: var(--rose);
   color: var(--white);
 }
+.signup div:nth-child(4),
 .signup div:last-child {
+  text-align: center;
+}
+.signup h1 {
   text-align: center;
 }

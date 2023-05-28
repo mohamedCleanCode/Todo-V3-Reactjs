@@ -3,6 +3,7 @@ import React from "react";
 const Signup = () => {
   return (
     <form className="signup">
+      <h1>Signup</h1>
       <div>
         <input type="text" name="username" placeholder="Type username" />
       </div>
