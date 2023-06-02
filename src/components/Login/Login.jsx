@@ -8,6 +8,9 @@ const Login = () => {
         <input type="email" name="email" placeholder="Type email" />
       </div>
       <div>
+        <input type="password" name="password" placeholder="Type password" />
+      </div>
+      <div>
         <input type="submit" value="Login" />
       </div>
       <div>
