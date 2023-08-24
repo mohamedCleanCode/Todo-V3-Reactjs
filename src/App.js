@@ -7,6 +7,7 @@ import ResetPassword from "./components/ResetPassword/ResetPassword";
 import Signup from "./components/Signup/Signup";
 import Todos from "./components/Todos/Todos";
 import useProtectedRoute from "./components/hooks/useProtectedRoute";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [isUser, userData] = useProtectedRoute();
@@ -14,6 +15,9 @@ function App() {
     <div className="app">
       <TodosProvider>
         <Routes>
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
           <Route element={<ProtectedRoute auth={isUser} />}>
             <Route
               path="/"
@@ -25,9 +29,6 @@ function App() {
               }
             />
           </Route>
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/reset-password" element={<ResetPassword />} />
         </Routes>
       </TodosProvider>
     </div>

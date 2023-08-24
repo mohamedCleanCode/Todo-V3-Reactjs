@@ -4,7 +4,9 @@ import { TodoItem } from "../TodoItem/TodoItem";
 const Todos = () => {
   return (
     <div className="todos">
-      <div className="message">Welcome back m635379@gmail.com </div>
+      <div className="message">
+        Welcome back {JSON.parse(localStorage.getItem("user")).email}
+      </div>
       <div className="todos-list">
         <TodoItem title="" />
         <TodoItem title="" />
