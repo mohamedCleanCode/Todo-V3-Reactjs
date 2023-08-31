@@ -5,7 +5,7 @@ function getCookie(name) {
   if (parts.length === 2) return parts.pop().split(";").shift();
 }
 const postData = async (url, data) => {
-  const token = getCookie("token");
+  const token = await getCookie("token");
   let res;
   const config = {
     headers: {

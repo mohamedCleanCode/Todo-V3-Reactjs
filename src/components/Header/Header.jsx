@@ -18,9 +18,13 @@ const Header = () => {
           <button className="add-new" onClick={onClickAddNew}>
             Add New
           </button>
-          <Link to="/login" className="sign-in">
-            Sign in
-          </Link>
+          {localStorage.getItem("user") ? (
+            <button>Logout</button>
+          ) : (
+            <Link to="/login" className="sign-in">
+              Signin
+            </Link>
+          )}
         </div>
       </div>
       <EditTask active={active} onClickCloseButton={onClickCloseButton} />

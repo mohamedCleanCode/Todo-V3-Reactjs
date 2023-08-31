@@ -1,15 +1,25 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { ToastContainer } from "react-toastify";
 import { TodosContext } from "../../ContextApi/TodosContext";
+import Notify from "../utils/Notify";
 
 const EditTask = ({ active, onClickCloseButton }) => {
-  const { addTodo } = useContext(TodosContext);
+  const { addTodo, data } = useContext(TodosContext);
   const [todoName, setTodoName] = useState("");
   const [todoProgress, setTodoProgress] = useState(0);
   const handleSubmit = (e) => {
-    console.log(todoName);
-    console.log(todoProgress);
     addTodo(todoName, todoProgress);
   };
+  useEffect(() => {
+    if (data) {
+      console.log(data);
+      if (data.status === 201) {
+        Notify("success", "Task added successfully");
+      } else {
+        Notify("warn", "Something went wrong please try again!");
+      }
+    }
+  }, [data]);
   return (
     <div className={`edit-task ${active ? "active" : ""}`}>
       <div className="overlay"></div>
@@ -24,6 +34,7 @@ const EditTask = ({ active, onClickCloseButton }) => {
           <input
             className="task-input"
             type="text"
+            placeholder="Enter your task..."
             value={todoName}
             onChange={(e) => setTodoName(e.target.value)}
           />
@@ -40,9 +51,11 @@ const EditTask = ({ active, onClickCloseButton }) => {
             value={todoProgress}
             onChange={(e) => setTodoProgress(e.target.value)}
           />
+          {todoProgress === "0" ? "" : todoProgress}
         </div>
         <button onClick={handleSubmit}>Submit</button>
       </div>
+      <ToastContainer autoClose={1000} />
     </div>
   );
 };
